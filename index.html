@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLOCKVERSE — Build Beyond</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="scene"></div>
+  <div class="vignette"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="brand-mark">B</span>
+
+      <span>
+        BLOCK<span class="brand-light">VERSE</span>
+        <small>BUILD BEYOND</small>
+      </span>
+    </a>
+
+    <div class="top-right">
+      <span class="online-dot"></span>
+      <span>WORLD ONLINE</span>
+      <button class="icon-btn" id="soundBtn">♫</button>
+    </div>
+  </header>
+
+  <main id="menu" class="menu">
+
+    <div class="eyebrow">
+      <span></span>
+      YOUR NEXT ADVENTURE STARTS HERE
+    </div>
+
+    <h1>
+      MAKE YOUR<br>
+      <em>OWN WORLD.</em>
+    </h1>
+
+    <p class="intro">
+      Explore wild landscapes. Shape the world around you.<br>
+      Every block is a new possibility.
+    </p>
+
+    <div class="menu-actions">
+      <button class="primary-btn" id="playBtn">
+        <span>▶</span>
+        PLAY WORLD
+        <b>↗</b>
+      </button>
+
+      <button class="secondary-btn" id="howBtn">
+        HOW TO PLAY <span>＋</span>
+      </button>
+    </div>
+
+    <div class="feature-row">
+
+      <div>
+        <span class="feature-icon">▦</span>
+        <span>
+          <b>CREATE</b>
+          <small>Build anything</small>
+        </span>
+      </div>
+
+      <div>
+        <span class="feature-icon">⌁</span>
+        <span>
+          <b>EXPLORE</b>
+          <small>Discover new places</small>
+        </span>
+      </div>
+
+      <div>
+        <span class="feature-icon">◇</span>
+        <span>
+          <b>SHAPE</b>
+          <small>Your world, your rules</small>
+        </span>
+      </div>
+
+    </div>
+
+    <div class="version">
+      EARLY ACCESS <span>•</span> WEB EDITION 0.2
+    </div>
+
+  </main>
+
+  <!-- HOW TO PLAY -->
+
+  <section id="howPanel" class="modal hidden">
+
+    <div class="modal-card">
+
+      <button class="close" id="closeHow">×</button>
+
+      <div class="eyebrow">QUICK GUIDE</div>
+
+      <h2>THE WORLD IS YOURS.</h2>
+
+      <div class="guide">
+        <p><kbd>W A S D</kbd> Move around</p>
+        <p><kbd>MOUSE</kbd> Look around</p>
+        <p><kbd>SPACE</kbd> Jump</p>
+        <p><kbd>LEFT CLICK</kbd> Break a block</p>
+        <p><kbd>RIGHT CLICK</kbd> Place a block</p>
+        <p><kbd>1 – 6</kbd> Select block</p>
+        <p><kbd>ESC</kbd> Pause / unlock mouse</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GAME HUD -->
+
+  <div id="hud" class="hud hidden">
+
+    <div class="hud-top">
+
+      <div class="world-label">
+        <span class="live-dot"></span>
+        GREEN VALLEY
+        <small>CREATIVE WORLD</small>
+      </div>
+
+      <div class="coords" id="coords">
+        X 0 · Y 0 · Z 0
+      </div>
+
+    </div>
+
+    <div class="crosshair">
+      <i></i>
+      <b></b>
+    </div>
+
+    <div class="tip" id="tip">
+      CLICK TO CAPTURE MOUSE
+    </div>
+
+    <div class="hotbar" id="hotbar"></div>
+
+    <div class="hud-bottom">
+      <span>WASD <b>MOVE</b></span>
+      <span>SPACE <b>JUMP</b></span>
+      <span>CLICK <b>BUILD</b></span>
+      <span>ESC <b>PAUSE</b></span>
+    </div>
+
+  </div>
+
+  <!-- PAUSE MENU -->
+
+  <section id="pausePanel" class="modal hidden">
+
+    <div class="modal-card pause-card">
+
+      <div class="eyebrow">TAKE A BREATHER</div>
+
+      <h2>WORLD PAUSED</h2>
+
+      <button class="primary-btn" id="resumeBtn">
+        RESUME WORLD <b>↗</b>
+      </button>
+
+      <button class="secondary-btn" id="menuBtn">
+        BACK TO MAIN MENU
+      </button>
+
+    </div>
+
+  </section>
+
+  <script type="module" src="game.js"></script>
+
+</body>
+</html>
